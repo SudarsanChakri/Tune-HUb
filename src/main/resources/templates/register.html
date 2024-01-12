@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="/registered" method="post" id="registrationForm">
+
+<label>UserName : </label>
+<input type="text" name = "username" minlength="5" maxlength="20" required/>
+<br>
+<label>Email : </label>
+<input type="email" name = "email" required/>
+<br>
+<label>Password : </label>
+<input type="password" name = "password" required/>
+<br>
+<label>Gender : </label>
+<input type="radio" name="gender" value = "male" required/>Male
+<input type="radio" name="gender" value = "female" required/>Female
+<input type="radio" name="gender" value = "other" required/>Other
+<br>
+
+<label>Role : </label>
+<input type="radio" name="role" value = "Admin" required/>Admin
+<input type="radio" name="role" value = "Customer" required/>Customer
+<br>
+
+<label>Address : </label>
+<textarea name= "address" required></textarea>
+<br>
+
+<input type="submit"/>
+</form>
+<script th:inline="javascript">
+
+</script>
+
+
+
+</body>
+</html>
