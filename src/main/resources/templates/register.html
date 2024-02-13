@@ -1,8 +1,11 @@
+
+<!-- Register page completed -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Register</title>
+<link rel="stylesheet" th:href="@{/CSS/register.css}">
 </head>
 <body>
 <form action="/registered" method="post" id="registrationForm">
@@ -16,18 +19,22 @@
 <label>Password : </label>
 <input type="password" name = "password" required/>
 <br>
-<label>Gender : </label>
+
+<div class="gender">
+<label class="gender">Gender : </label>
 <input type="radio" name="gender" value = "male" required/>Male
 <input type="radio" name="gender" value = "female" required/>Female
 <input type="radio" name="gender" value = "other" required/>Other
+</div>
 <br>
-
-<label>Role : </label>
+<div class="role">
+<label class="role">Role : </label>
 <input type="radio" name="role" value = "Admin" required/>Admin
 <input type="radio" name="role" value = "Customer" required/>Customer
+</div>
 <br>
 
-<label>Address : </label>
+<label>Location : </label>
 <textarea name= "address" required></textarea>
 <br>
 

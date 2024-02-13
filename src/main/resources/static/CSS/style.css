@@ -1,15 +1,66 @@
-body{
- 		background-color: rgb(255, 26, 52);
- 		display:flex;
- }
- .buttons{
- margin-top:13px;
- padding:5px;
- 
- 
- 
- 		
- }
- h1{
- width:87.6%;
- }
+
+
+body {
+    background-color: #2d2d2d;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    color: rgb(255, 26, 52); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: rgba(255, 26, 52, 0.8); 
+    font-size: 2em;
+    position: relative;
+    animation: echo 3s infinite; 
+}
+
+h1:before,
+h1:after {
+    content: attr(data-content); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 26, 52, 0.5); 
+    z-index: -1;
+}
+
+@keyframes echo {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25%, 75% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+}
+
+
+.buttons {
+    text-decoration: none;
+}
+
+#login button,
+#register button {
+    background-color: #3d3d3d; 
+    color: rgb(255, 26, 52); 
+    padding: 12px 24px;
+    font-size: 16px;
+    border: 2px solid rgb(255, 26, 52); 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#login button:hover,
+#register button:hover {
+    background-color: rgb(255, 26, 52); 
+    color: #2d2d2d; 
+}

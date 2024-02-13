@@ -27,16 +27,15 @@ public class UsersController {
 			userServ.addUser(user);
 		}
 		
-		return "registersuccess";
+		return "index";
 	}
 	
 	//Mothod to validate the login data and returns the login success or failure status
-	@PostMapping("/user")
+	@PostMapping("/validateuser")
 	public String validate(@RequestParam String email, @RequestParam String password, HttpSession session) {
 		boolean validUser = userServ.validAccount(email,password);
 		if(validUser==true) 
 		{
-			
 			String role = userServ.getRole(email);
 			session.setAttribute("email", email);
 			if(role.equals("Admin")) 
@@ -45,21 +44,16 @@ public class UsersController {
 			}
 			else if(role.equals("Customer")) 
 			{
-				
+				boolean paidcustomer = userServ.getPaymentStatus(email);
+				if(paidcustomer) {
+					return "paidcustomer";
+				}
 				return "customerhome";
 			}
 			
 			
 		}
-		else 
-		{
-			
-			return "invalid";
-		}
-		
-		return null;
-		
-		
+			return "retrylogin";
 	}
 	
 	

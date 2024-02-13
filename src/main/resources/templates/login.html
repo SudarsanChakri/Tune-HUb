@@ -1,14 +1,16 @@
+<!-- Login details page -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Login</title>
+<link rel="stylesheet" th:href="@{/CSS/login.css}">
 </head>
 <body>
-<form action="/user" method="post">
+<form id = "login" action="/validateuser" method="post">
 <h2>Welcome to login page</h2>
-Email : <input type="text" name="email" placeholder="Enter your email">
-Password : <input type="text" name="password" placeholder="Enter your password">
+Email : <br><input type="text" name="email" placeholder="Enter your email" required>
+Password : <br><input type="text" name="password" placeholder="Enter your password" required>
 <button type="submit">Login</button>
 </form>
 </body>

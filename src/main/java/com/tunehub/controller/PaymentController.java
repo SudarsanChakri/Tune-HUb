@@ -36,12 +36,12 @@ public class PaymentController {
 		Users u = service.getUser(mail);
 		u.setPremium(true);
 		service.updateUser(u);
-		return "customerHome";
+		return "login";
 	}
 
 	@GetMapping("/payment-failure")
 	public String paymentFailure() {
-		return "customerHome";
+		return "pay";
 	}
 
 

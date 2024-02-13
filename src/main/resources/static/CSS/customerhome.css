@@ -1,0 +1,80 @@
+/* CSS for Customer Home page */
+
+body {
+    background-color: #2d2d2d; /* Dark background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+    color: rgb(255, 255, 255); /* White text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    color: rgba(255, 26, 52, 0.8); /* Semi-transparent red text */
+}
+
+.Not-Premium,
+.Premium {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 26, 52, 0.8); /* Add a red shadow */
+    background-color: #3d3d3d; /* Dark background for both sections */
+}
+
+.Not-Premium a,
+.Premium a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff; /* White text color for links */
+    background-color: rgba(255, 26, 52, 0.8); /* Semi-transparent red background for links */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.Not-Premium a:hover,
+.Premium a:hover {
+    background-color: #ff1a34; /* Lighter red on hover for links */
+}
+
+table {
+    width: 80%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: rgba(255, 26, 52, 0.8); /* Semi-transparent red background for table header */
+    color: #ffffff; /* White text color for table header */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+audio {
+    width: 100%; /* Make audio player responsive within the table cell */
+    margin-top: 5px;
+}
+
+/* Style the logout link */
+a[href="/logout"] {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff; /* White text color for logout link */
+    background-color: rgba(255, 26, 52, 0.8); /* Semi-transparent red background for logout link */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a[href="/logout"]:hover {
+    background-color: #ff1a34; /* Lighter red on hover for logout link */
+}

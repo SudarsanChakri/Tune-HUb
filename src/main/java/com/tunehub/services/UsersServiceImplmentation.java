@@ -52,5 +52,13 @@ public class UsersServiceImplmentation implements UsersService
 	public void updateUser(Users u) {
 		userRepo.save(u);
 	}
+	@Override
+	public boolean getPaymentStatus(String email) {
+		Users user = userRepo.findByEmail(email);
+		if(user.isPremium()) {
+			return true;
+		}
+		return false;
+	}
 
 }

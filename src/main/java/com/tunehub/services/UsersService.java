@@ -15,4 +15,6 @@ public interface UsersService
 	Users getUser(String email);
 
 	void updateUser(Users u);
+
+	boolean getPaymentStatus(String email);
 }

@@ -2,12 +2,47 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Customer page</title>
+<link rel="stylesheet" th:href="@{/CSS/customerhome.css}">
 </head>
 <body>
+
+<div th:unless = ${isPremium} class="Not-Premium">
+
 <h2>Welcome to tune hub, Enjoy your listening</h2>
 <a href="/pay">SUBSCRIBE</a>
 <br>
 <a href = "/logout">LOGOUT</a>
+
+</div>
+
+<div th:if = ${isPremium} class="Premium">
+
+<h2>Songs</h2>
+	<table border>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Artist</th>
+				<th>Genre</th>
+				<th>Play</th>
+			</tr>
+
+		</thead>
+		<tbody>
+			<tr th:each="song : ${allsongs}">
+				<td th:text="${song.name}"></td>
+				<td th:text="${song.artist}"></td>
+				<td th:text="${song.genre}"></td>
+				<td><audio controls>
+						<source th:src="${song.link}" type="audio/mpeg">
+					</audio></td>
+			</tr>
+		</tbody>
+	</table>
+<br>
+<a href = "/logout">LOGOUT</a>
+
+</div>
 </body>
 </html>

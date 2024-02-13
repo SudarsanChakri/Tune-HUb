@@ -1,0 +1,42 @@
+/* CSS for Pay page */
+
+body {
+    background-color: #2d2d2d; /* Dark background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+    color: rgb(255, 255, 255); /* White text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: rgba(255, 26, 52, 0.8); /* Semi-transparent red text */
+}
+
+p {
+    max-width: 600px; /* Limit the width of the paragraph for better readability */
+    line-height: 1.6; /* Adjusted line height */
+}
+
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(255, 26, 52, 0.8); /* Semi-transparent red background for button */
+    color: #ffffff; /* White text color for button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #ff1a34; /* Lighter red on hover for button */
+}
+h4{
+	color: rgba(255, 26, 52, 0.8);
+	padding:30px;
+}

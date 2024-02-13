@@ -2,21 +2,23 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Add Song</title>
+<link rel="stylesheet" th:href="@{/CSS/addsong.css}">
 </head>
 <body>
+<!-- added to react -->
 <form action="/addsong" method="post">
 	<label>Song Name</label>
-	<input name = "name" type="text">
+	<input name = "name" type="text" required>
 	<br>
 	<label>Artist</label>
-	<input name = "artist" type="text">
+	<input name = "artist" type="text" required>
 	<br>
 	<label>Genre</label>
-	<input name = "genre" type="text">
+	<input name = "genre" type="text" required>
 	<br>
 	<label>Link</label>
-	<input name = "link" type="text">
+	<input name = "link" type="text" required>
 	<br>
 	<button>ADD SONG</button>
 </form>

@@ -1,0 +1,66 @@
+
+
+body {
+    background-color: #2d2d2d; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    color: rgb(255, 255, 255); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#adminhome {
+    background-color: #3d3d3d; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 26, 52, 0.8); 
+    text-align: center;
+}
+
+h2 {
+    color: rgba(255, 26, 52, 0.8); 
+    margin-bottom: 20px;
+}
+
+a {
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+    opacity: 0; 
+    animation: echo 4s infinite alternate; 
+}
+
+@keyframes echo {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+#a1 {
+    animation-delay: 0.1s;
+}
+
+#a2 {
+    animation-delay: 0.3s;
+}
+
+#a3 {
+    animation-delay: 0.5s;
+}
+
+#a4 {
+    animation-delay: 0.7s;
+}
+
+a:hover {
+    color: #ff1a34; 
+}
